@@ -3,6 +3,7 @@ import axios from 'axios';
 import WeatherSearch from "./WeatherSearch .jsx";
 import WeatherDisplay from "./WeatherDisplay .jsx";
 import Button from "./Button.jsx";
+import "../css/WeatherApp.css"
 
 const WeatherApp = () => {
     const [citySearch, setCitySearch] = useState('');
@@ -55,8 +56,9 @@ const WeatherApp = () => {
     }, [citySearch]);
 
     return (
-        <div>
-            <h1>Application Météo</h1>
+        <div className="body">
+            <h1 >Application Météo</h1>
+            <h2> Rechercher votre ville</h2>
             <WeatherSearch
                 citySearch={citySearch}
                 setCitySearch={setCitySearch}

@@ -1,8 +1,9 @@
 import React from 'react';
+import "../css/WeatherSearch.css"
 
 const WeatherSearch = ({ citySearch, setCitySearch, fetchCity, handleSelectCity, citySelected }) => {
     return (
-        <div>
+        <div className="container-search-city">
             <input
                 type="text"
                 placeholder="Entrez une ville"
@@ -10,7 +11,7 @@ const WeatherSearch = ({ citySearch, setCitySearch, fetchCity, handleSelectCity,
                 onChange={(e) => setCitySearch(e.target.value)}
             />
             {fetchCity.length > 0 && (
-                <div>
+                <div className="container-select-city">
                     <p>Il y a {fetchCity.length} résultat(s), sélectionnez la ville correspondante :</p>
                     <select value={citySelected.value || ''} onChange={handleSelectCity}>
                         <option value="" disabled>Sélectionnez une ville</option>

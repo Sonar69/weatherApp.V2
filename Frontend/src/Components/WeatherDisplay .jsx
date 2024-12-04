@@ -1,10 +1,11 @@
 import React from 'react';
+import "../css/WeatherDisplay.css"
 
-const WeatherDisplay = ({ weather, citySelected }) => {
+const WeatherDisplay = ({ weather, citySelected,  }) => {
     return (
         <div>
             {weather && (
-                <div>
+                <div className="container-weather-display">
                     <h2>Météo pour {citySelected.name}</h2>
                     <p>Température actuelle : {weather.current.apparent_temperature}°C</p>
                     <p>Vitesse du vent : {weather.current.wind_speed_10m} km/h</p>

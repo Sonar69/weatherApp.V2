@@ -1,0 +1,29 @@
+
+.container-search-city{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 1em;
+}
+
+.container-search-city input{
+    border-radius: 50px;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.container-select-city{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+}
+.container-select-city select{
+    border-radius: 50px;
+    padding: 0.5em;
+    margin: 0.5em;
+}
