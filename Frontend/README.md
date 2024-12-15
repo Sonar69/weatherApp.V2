@@ -26,7 +26,7 @@ npm ou yarn installé sur votre machine.
 
 Étape 1 : Cloner le projet
 
-git clone https://github.com/votre-utilisateur/application-meteo.git
+git clone https://github.com/Sonar69/weatherApp.V2.git
 cd application-meteo
 
 Étape 2 : Installer les dépendances
