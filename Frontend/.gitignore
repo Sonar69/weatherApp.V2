@@ -29,3 +29,16 @@ dist/
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorer les polices
+src/fonts/
+
+# Ignorer les vidéos
+public/videos/
+public/gif/
+
+# Exclure des formats spécifiques
+*.ttf
+*.otf
+*.mp4
+*.avi

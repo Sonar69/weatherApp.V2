@@ -1,7 +1,13 @@
 
-.container-weather-display {
+.weather-display {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+img {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
 }
