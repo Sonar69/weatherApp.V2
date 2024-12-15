@@ -1,5 +1,5 @@
 import React from 'react';
-import WeatherSearch from "./WeatherSearch .jsx";
+import WeatherSearch from "../Components/WeatherSearch .jsx";
 import "../css/WeatherApp.css"
 
 const WeatherApp = () => {
