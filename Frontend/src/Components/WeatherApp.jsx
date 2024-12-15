@@ -8,6 +8,9 @@ const WeatherApp = () => {
         <div className="body-app">
             <h1 className="title-app">Application Météo</h1>
             <WeatherSearch/>
+            <footer className="footer-app">
+                © {new Date().getFullYear()} Clément Bonnet. Tous droits réservés.
+            </footer>
         </div>
     );
 };

@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "../css/video.css";
 
-const WeatherCode = ({code}) => {
+const WeatherCode = ({code = 0}) => {
     const [currentVideo, setCurrentVideo] = useState("");
     const [description, setDescription] = useState("");
+    const videoRef = useRef(null);
 
     // fonction d'appel de la videos et description grace au weather code fournit
     const getWeatherDescription = (code) => {
-        let videoName = "";
-        let desc = "";
+        let videoName = "sun";
+        let desc = "Ciel dégagé";
 
         // condition pour la description et la videos en fonction du weather code
         switch (code) {
@@ -136,16 +137,25 @@ const WeatherCode = ({code}) => {
         const {desc, videoName} = getWeatherDescription(code);
         setCurrentVideo(videoName);
         setDescription(desc);
-        if (videoName) {
-            console.log(`Afficher la vidéo : ${videoName}`);
-        }
+        // if (videoName) {
+        //     console.log(`Afficher la vidéo : ${videoName}`);
+        // }
     }, [code])
+
+    // Recharger la vidéo quand `currentVideo` change
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            video.load();
+        }
+    }, [currentVideo])
 
     return (
         <div>
             {currentVideo && (
                 // Afficher la vidéo en arrière-plan pour le meilleur affichage
                 <video
+                    ref={videoRef}
                     id={currentVideo}
                     className="video-weather-background"
                     autoPlay

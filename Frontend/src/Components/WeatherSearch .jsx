@@ -76,6 +76,8 @@ const WeatherSearch = () => {
         const timer = setTimeout(() => {
             if (citySearch) {
                 getCity();
+            } else {
+                setFetchCity([]);
             }
         }, 500);
 
@@ -88,6 +90,11 @@ const WeatherSearch = () => {
             handleWeatherCity(citySelected.latitude, citySelected.longitude);
         }
     }, [citySelected])
+
+    useEffect(() => {
+        // Réinitialiser la sélection de ville lorsque les résultats de recherche changent
+        setCitySelected({});
+    }, [fetchCity]);
 
     return (
         <div className="container-search-city">
